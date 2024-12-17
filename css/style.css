@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Шрифт за целия сайт */
+    display: flex;
+    flex-direction: column; /* Подрежда елементите вертикално */
+    min-height: 100vh; /* Височина на body - поне 100% от екрана */
+    background-color: #f9f9f9;
+}
+
+main {
+    flex: 1; /* Основното съдържание разширява наличното място */
+    padding: 20px;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+
+/* Контейнер за всички секции */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Секциите (първата и втората) */
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.section-first {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    flex-direction: row;
+}
+
+.section-second {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    flex-direction: row-reverse;
+}
+
+/* Контейнери за текст */
+.text-container {
+    flex: 1;
+    padding: 20px;
+}
+
+.text-container h1, .text-container h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.text-container p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.text-container button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.text-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Контейнери за изображения */
+.image-container {
+    flex: 1;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+/* За текстовете, които подчертават марки */
+.text-container span {
+    font-weight: bold;
+    color: #007bff;
+}
+.catalog {
+    display: flex; /* Подрежда продуктите в редове */
+    flex-wrap: wrap; /* Пренася продуктите на нов ред, ако няма място */
+    gap: 20px; /* Разстояние между продуктите */
+    justify-content: center; /* Центрира продуктите */
+    padding: 20px; /* Вътрешни отстояния */
+}
+
+.catalog-item {
+    width: 300px; /* Ширина на всеки продукт */
+    padding: 15px; /* Вътрешни отстояния */
+    border: 1px solid #ccc; /* Лека граница */
+    border-radius: 8px; /* Заоблени ръбове */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Лека сянка */
+    background-color: #fff; /* Бял фон */
+    text-align: center; /* Центриране на текста */
+    display: flex; /* Flexbox за вътрешно подреждане */
+    flex-direction: column; /* Вертикално подреждане */
+    align-items: center; /* Центриране на съдържанието */
+}
+
+.catalog-item img {
+    max-width: 100%; /* Ограничение до ширината на контейнера */
+    height: auto; /* Поддържане на пропорциите */
+    margin-bottom: 15px; /* Разстояние под изображението */
+}
+
+.catalog-item h3 {
+    font-size: 18px;
+    margin-bottom: 10px; /* Разстояние под заглавието */
+}
+
+.catalog-item p {
+    font-size: 14px;
+    margin-bottom: 10px; /* Разстояние между абзаците */
+}
+
+.catalog-item input[type="number"] {
+    width: 60px; /* Ширина на инпута */
+    padding: 5px; /* Вътрешни отстояния */
+    font-size: 14px; /* Размер на текста */
+    margin-top: 10px; /* Разстояние над инпута */
+    box-sizing: border-box; /* Увери се, че padding и border са включени */
+}
+
+.catalog-item button {
+    margin-top: 10px; /* Разстояние над бутона */
+    padding: 10px 15px; /* Удобен размер за бутона */
+    font-size: 14px; /* Размер на текста */
+    background-color: #007BFF; /* Син фон */
+    color: #fff; /* Бял текст */
+    border: none; /* Премахване на рамката */
+    border-radius: 4px; /* Заоблени ръбове */
+    cursor: pointer; /* Pointer курсор */
+}
+
+.catalog-item button:hover {
+    background-color: #0056b3; /* По-тъмен син за hover */
+}
+
+#load-more {
+    margin: 20px auto; /* Центриране на бутона */
+    display: block; /* Увери се, че е блоков елемент */
+    padding: 10px 20px; /* Размер на бутона */
+    font-size: 16px; /* Размер на текста */
+    background-color: #28a745; /* Зелен фон */
+    color: #fff; /* Бял текст */
+    border: none; /* Премахване на рамката */
+    border-radius: 4px; /* Заоблени ръбове */
+    cursor: pointer; /* Pointer курсор */
+}
+
+#load-more:hover {
+    background-color: #218838; /* По-тъмен зелен за hover */
+}
+
+form {
+    margin: 20px 0;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.search-form label {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.search-form input[type="text"] {
+    padding: 8px;
+    font-size: 16px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-form button {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.search-form button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #333; /* Същият цвят като на хедъра */
+    color: white; /* Бял текст */
+    text-align: center; /* Центриран текст */
+    padding: 30px 0; /* Височина на футъра чрез вътрешен отстъп */
+    margin-top: 637px; /* Разстояние от основното съдържание */
+    font-size: 18px; /* Размер на текста */
+    margin-top:calc(5% + 60px);
+}
+
+.footer-text {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    margin: 5px 0;
+    font-family: Arial, sans-serif; /* Променя шрифта */
+    line-height: 1.5; /* Подобрява разстоянието между редовете */
+}
+
+header nav a {
+    color: white; /* Бял цвят на текста */
+    font-size: 20px; /* Големина на текста */
+    text-decoration: none; /* Премахване на подчертаването */
+    margin: 0 15px; /* Разстояние между линковете */
+    transition: color 0.3s ease; /* Анимация при преминаване на курсора */
+}
+
+header nav a:hover {
+    color: rgb(7, 124, 219); /* Промяна на цвета при hover */
+}
